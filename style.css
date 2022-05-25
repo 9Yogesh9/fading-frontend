@@ -1,0 +1,68 @@
+body{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: larger;
+}
+
+.fade-in-out{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    height: fit-content;
+}
+
+.fade-in-out span{
+    display: inline-block;
+    color: transparent;
+    text-shadow: 0px 0px 0px rgb(255, 255, 255);
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.fade-in-out span:nth-child(1) {
+    animation-name: fadeleft;
+}
+
+.fade-in-out span:nth-child(2){
+    animation-name: faderight;
+    animation-delay: .3s;
+}
+
+.fade-in-out span:nth-child(3){
+    animation-name: fadeleft;
+    animation-delay: .6s;
+}
+
+.fade-in-out span:nth-child(4){
+    animation-name: faderight;
+    animation-delay: .9s;
+}
+.fade-in-out span:nth-child(5){
+    animation-name: fadeleft;
+    animation-delay: 1.2s;
+}
+.fade-in-out span:nth-child(6){
+    animation-name: faderight;
+    animation-delay: 1.5s;
+}
+
+@keyframes fadeleft {
+    50%{
+        transform: skew(50deg) translateY(-200%);
+        text-shadow: 0px 0px 50px;
+        opacity: 0;
+    }
+}
+
+@keyframes faderight {
+    50%{
+        transform: skew(50deg) translateY(-200%);
+        text-shadow: 0px 0px 50px;
+        opacity: 0;
+    }
+}
